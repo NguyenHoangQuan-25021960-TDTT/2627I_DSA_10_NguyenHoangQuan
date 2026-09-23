@@ -1,0 +1,8 @@
+Chuỗi thao tác: union(0, 1), union(0, 2), ..., union(0, n-1)
+(a) Số thành phần liên thông: 1
+(b) Quick-Find : ~ n^2 / 2
+    (Tổng lần cập nhật = 1 + 2 + ... + (n-1) = n(n-1)/2 ~ n^2/2)
+(c) Quick-Union : Θ(n)
+    (Cấu trúc tạo thành cây thoái hóa dạng đường thẳng chiều cao n-1)
+(d) Weighted Quick-Union : Θ(1)
+    (Nút 0 chỉ cách gốc đúng 1 cạnh do quy tắc gộp cây nhỏ vào cây lớn)
