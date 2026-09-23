@@ -1,0 +1,5 @@
+Các giá trị parent[8] có thể nhận: 0, 4, 8
+Giải thích:
+- Cây chứa 8 có kích thước = 2 (gồm 8 và 9).
+- Nếu 8 là gốc tự do: parent[8] = 8.
+- Nếu 8 được gộp vào cây khác: 8 phải trỏ tới GỐC của cây có size >= 2, đó là gốc 0 (size 4) hoặc gốc 4 (size 4).
