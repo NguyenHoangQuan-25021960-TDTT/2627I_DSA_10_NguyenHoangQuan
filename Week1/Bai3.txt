@@ -1,0 +1,8 @@
+Các cặp tham số hợp lệ cho lệnh union(p, q) gần nhất:
+(0, 4), (4, 0), (4, 5), (6, 4), (8, 9)
+
+Giải thích ngắn gọn:
+- Theo quy tắc link-by-size: cây nhỏ trỏ vào cây lớn (hoặc q -> p khi cùng size).
+- Các cặp (0, 4), (4, 0), (4, 5), (6, 4) đều hợp lệ để tạo ra các liên kết trỏ về gốc 4.
+- Cặp (8, 9) tạo liên kết 9 -> 8 cho cây phụ bên phải.
+- Loại (2, 3) do cùng tập hợp; loại (5, 0) do sai chiều trỏ; loại (5, 7) do trỏ 7 -> 5.
