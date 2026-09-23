@@ -1,0 +1,26 @@
+a.
+int sum = 0;
+for (int n = N; n > 0; n /= 2)
+    for (int i = 0; i < n; i++) sum++;
+- Vòng ngoài làm n giảm một nửa sau mỗi bước: N, N/2, N/4, ..., 1.
+- Vòng trong lặp n lần.
+- Tổng số phép toán: N + N/2 + N/4 + ... + 1 = 2*N - 1 ~ 2*N.
+-> Bậc tăng trưởng: O(N) (Tuyến tính).
+
+b.
+int sum = 0;
+for (int i = 1; i < N; i *= 2)
+    for (int j = 0; j < i; j++) sum++;
+- Biến i nhận các giá trị theo cấp số nhân: 1, 2, 4, 8, ..., 2^k < N.
+- Vòng trong lặp i lần.
+- Tổng số phép toán: 1 + 2 + 4 + ... + 2^k = 2^(k+1) - 1 < 2*N.
+-> Bậc tăng trưởng: O(N) (Tuyến tính).
+
+c.
+int sum = 0;
+for (int i = 1; i < N; i *= 2)
+    for (int j = 0; j < N; j++) sum++;
+- Vòng ngoài i nhân 2 mỗi bước nên lặp log2(N) lần.
+- Vòng trong luôn lặp cố định N lần với mỗi giá trị i.
+- Tổng số phép toán: N * log2(N).
+-> Bậc tăng trưởng: O(N log N).
