@@ -1,0 +1,16 @@
+Lỗi: Trong vòng lặp for, khi i = p thì leader[p] bị ghi đè ngay lập tức thành leader[q].
+Các phần tử đứng sau p có cùng leader với p sẽ bị so sánh sai và không được cập nhật.
+
+Testcase:
+- n = 3
+- Các phép toán: union(0, 1), sau đó union(0, 2)
+- Chọn i = 0, j = 1
+
+Giải thích:
+- Ban đầu: leader = [0, 1, 2]
+- Sau union(0, 1): leader = [1, 1, 2]
+- Chạy union(0, 2):
+  + Tại i = 0: leader[0] đổi thành 2. (Lúc này leader[0] = 2)
+  + Tại i = 1: leader[1] == leader[0] (1 == 2) -> SAI! leader[1] giữ nguyên là 1.
+  + Mảng thu được: leader = [2, 1, 2]
+- Kết quả: Phần tử 0 và 1 cùng tập hợp nhưng find(0) = 2, find(1) = 1 (sai).
