@@ -1,0 +1,5 @@
+N = 3: S(3) = 3*2*1/6 = 1 (đúng).
+Giả sử đúng với N = k: S(k) = k(k-1)(k-2)/6.
+Với N = k + 1: Số bộ ba gồm bộ không chứa (k+1) và bộ chứa (k+1):
+   S(k+1) = S(k) + C(k, 2) = [k(k-1)(k-2)/6] + [k(k-1)/2]
+          = k(k-1)(k-2+3)/6 = (k+1)k(k-1)/6 (ĐPCM).
