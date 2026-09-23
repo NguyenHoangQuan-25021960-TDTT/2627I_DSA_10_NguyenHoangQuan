@@ -1,0 +1,5 @@
+Hiện tượng tràn số xảy ra khi cộng các số kiểu int quá lớn, dẫn đến kết quả
+vượt quá khoảng [-2^31, 2^31 - 1] (từ -2,147,483,648 đến 2,147,483,647).
+Để khắc phục, ta ép kiểu (cast) ít nhất một trong các số hạng sang kiểu long 
+(64-bit) trước khi thực hiện phép cộng. Khi đó, toàn bộ phép tính tổng sẽ 
+được thực hiện ở kiểu long, tránh tuyệt đối lỗi tràn số.
