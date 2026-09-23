@@ -1,0 +1,4 @@
+Quy tắc kiểm tra biểu diễn parent-link hợp lệ của Weighted Quick-Union:
+1. Không có chu trình (cycle): Mọi đường đi đều kết thúc tại gốc tự trỏ (parent[root] == root).
+2. Giới hạn độ sâu: Độ sâu tối đa của một nút không vượt quá log2(k) với k là số nút của cây.
+3. Điều kiện Kích thước (Size property): Nút cha luôn chứa cây con có kích thước lớn hơn hoặc bằng 2 lần kích thước cây con của nút con.
