@@ -1,0 +1,11 @@
+(a) Đáp án: 0 1 2 4 2 4 6
+Giải thích: Cứ sau 3 thao tác, queue tự in ra. Các trạng thái lần lượt là:
+Sau 3: 0
+Sau 6: 1 2
+Sau 9: 1 2 4
+Sau 12: 2 4 6
+(b) Đáp án: O(n)
+Giải thích: Mỗi lần enqueue bình thường O(1), nhưng cứ 3 thao tác phải in toàn bộ queue, tối đa O(n).
+(c) Đáp án: O(n)
+Giải thích: Có khoảng n/3 lần in, mỗi lần tốn O(n) ⇒ tổng O(n²). Chia cho n thao tác ⇒ O(n).
+
